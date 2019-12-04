@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.maven.day1</groupId>
+  <artifactId>demo.day1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+<!-- 配置spring-context(4.2.4)的jar包依赖 -->
+  	<dependency>
+  	  <!-- 公司名 -->
+  		<groupId>org.springframework</groupId>
+  		<!-- 项目名 -->
+  		<artifactId>spring-context-support</artifactId>
+  		<!-- 版本名 -->
+  		<version>4.2.4.RELEASE</version>
+  	</dependency>
+  	<!-- 配置spring-struts 的jar（3.0.5）包依赖 -->
+  	<dependency>
+  	<!-- 公司名 -->
+  		<groupId>org.springframework</groupId>
+  		<!-- 项目名 -->
+  		<artifactId>spring-struts</artifactId>
+  		<!-- 版本名 -->
+  		<version>3.0.5.RELEASE</version>
+  		<exclusions>
+  		<!-- 排除3.0.5版本的spring-beans -->
+  		 <exclusion>
+  		   <groupId>spring-beans</groupId>
+  		   <artifactId>3.0.5.RELEASE</artifactId>
+  		 </exclusion>
+  		</exclusions>
+  	</dependency>
+  </dependencies>
+</project>
